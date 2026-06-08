@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Main Branch Test') {
+        stage('Testing Branch Test') {
             steps {
-                sh 'echo this is the main branch'
+                sh 'echo this is a test branch'
             }
         }
     }
