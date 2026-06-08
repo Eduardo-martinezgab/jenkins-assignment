@@ -1,10 +1,15 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'ubuntu'
+        }
+    }
 
     stages {
-        stage('Main Branch Test') {
+        stage('Run') {
             steps {
-                sh 'echo this is the main branch'
+                sh 'echo Running in Docker container'
+                sh 'sleep 120'
             }
         }
     }
